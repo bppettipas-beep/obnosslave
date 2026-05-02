@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node --experimental-sqlite index.js"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[[mounts]]
+mountPath = "/app/data"
